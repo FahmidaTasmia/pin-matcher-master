@@ -22,3 +22,18 @@ document.getElementById('generate-pin').addEventListener('click', function(){
    const displayPinField = document.getElementById('display-pin');
   displayPinField.value =pin;
 })
+
+
+document.getElementById('calculator').addEventListener('click', function(event){
+    const number = event.target.innerText;
+    const typedNumberField = document.getElementById('typed-numbers');
+ if(isNaN (number)){
+    console.log(number);
+ }
+ else{
+   
+const previousTypeNumber = typedNumberField.value;
+const newTypedNumber = previousTypeNumber+number;
+typedNumberField.value = newTypedNumber;
+ }
+})
